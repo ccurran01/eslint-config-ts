@@ -1,22 +1,66 @@
 {
   "name": "@dvsa/eslint-config-ts",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Shareable ESLint config for Node/Typescript projects",
   "main": "index.js",
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4.33.0",
-    "@typescript-eslint/typescript-estree": ">=4.33.0",
-    "eslint": ">=7.32.0",
-    "eslint-config-airbnb-base": ">=14.2.0",
-    "eslint-config-airbnb-typescript": ">=12.3.1",
-    "eslint-plugin-import": ">=2.24.2",
-    "eslint-plugin-jest": ">=25.2.4",
-    "eslint-plugin-jsx-a11y": ">=6.4.1",
-    "eslint-plugin-react": ">=7.26.1",
-    "eslint-plugin-react-hooks": ">=4.2.0",
-    "eslint-plugin-security": ">=2.1.0"
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "default": "./index.js"
+    },
+    "./flat": {
+      "import": "./flat.js",
+      "default": "./flat.js"
+    }
   },
-  "repository": "github:dvsa/eslint-config-ts",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@stylistic/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.10.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "typescript": ">=4.5.0"
+  },
+  "files": [
+    "index.js",
+    "flat.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@stylistic/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.10.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "jest": "^30.2.0",
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvsa/eslint-config-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dvsa/eslint-config-ts/issues"
+  },
+  "homepage": "https://github.com/dvsa/eslint-config-ts#readme",
   "keywords": [
     "dvsa",
     "eslint",
